@@ -13,7 +13,7 @@
   --black-small-icon-size: 1.5rem;
   --text-color-white: #fff;
   --text-color-black: #252525;
-  --text-color-black-opcacity: #2525257c;
+  --text-color-black-opcacity: #413f3fe1;
   --cards-left-side-border-color: rgb(238, 175, 58);
   --button-color: rgb(59, 117, 197);
 }
@@ -28,19 +28,13 @@ body {
   width: 100%;
 }
 
-img {
-  width: 100px;
-  height: 100px;
-}
 
 .container {
   display: grid;
   grid-template-columns: repeat(1, 1fr) repeat(1, 4fr);
 }
 
-.container > div {
-  border: 1px solid black;
-}
+
 /* header section */
 .header {
   grid-column: 2 / 3;
@@ -201,30 +195,36 @@ img {
   display: grid;
   grid-template-columns: repeat(1, 2fr) repeat(1, 1fr);
   background-color: var(--bg-color-light-down);
+  padding: 1rem;
 }
 
 
 /* project section */
 .menu1 .your-project {
-  margin: 1rem 1rem 0
+  margin: 1rem 1rem 0;
+  grid-column: 1 / 2;
+  padding: 0.5rem;
+  font-weight: bold;
 }
+
+
 .main .project-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 190px;
   gap: 1rem;
   display: grid;
-  padding: 1rem;
 }
 
 .project-section .card {
   display: grid;
   grid-template: repeat(1, 1fr);
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: var(--bg-color-white);
   border-radius: 0.5rem;
   border-left: 8px solid;
   border-left-color: var(--cards-left-side-border-color);
+  box-shadow: 1px 2px 3px #25252571;
 
 }
 
@@ -232,9 +232,76 @@ img {
   justify-self: end;
 }
 
+.card > p {
+  font-size: 0.9rem;
+  color: var(--text-color-black-opcacity);
+}
+
 .card .actions span {
   font-size: 1rem;
   letter-spacing: 1rem;
+}
+
+/* aside - section */
+.aside-section {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-content: start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.menu2 .announcement {
+  text-align: left;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.menu2 .announcements-section .big-card {
+  background-color: var(--bg-color-white);
+  padding: 1.5rem 2rem; 
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 3px #25252571;
+}
+
+.big-card > p {
+  font-size: 0.9rem;
+  color: var(--text-color-black-opcacity);
+}
+
+.big-card .line {
+  border-bottom: 1px solid var(--text-color-black-opcacity);
+  opacity: 0.5;
+  margin: 1rem 0;
+}
+
+.menu3 .trending {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.menu3 .trending-section .profile-card{
+  border-radius: 0.5rem;
+  background-color: var(--bg-color-white);
+  padding: 0.5rem 2rem;
+  box-shadow: 1px 2px 3px #25252571;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.profile-card .users-tags {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.users-tags .user-name-tag {
+  font-weight: bold;
 }
 
 
