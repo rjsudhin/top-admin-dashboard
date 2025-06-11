@@ -3,32 +3,66 @@
   padding: 0;
 }
 
+/* font family */ 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --bg-color-white: #fff;
+  --bg-color-light-down: #ccc;
+  --bg-sidebar-bg-color: rgb(91, 187, 224);
+  --text-color-white: #fff;
+  --text-color-black: #252525;
+  --text-color-black-opcacity: #2525257c;
+  --cards-left-side-border-color: rgb(238, 175, 58);
+  --button-color: rgb(76, 76, 236);
+}
+
+html {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+body {
+  width: 100%;
+}
+
 img {
   width: 100px;
   height: 100px;
 }
 
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr) repeat(1, 4fr);
 }
+
+.container > div {
+ border: 1px solid black;
+}
+
+/* header section */
+.header {
+  grid-column: 2 / 3;
+}
+/* header section */
+
+/* sidebar section */
+.sidebar {
+  grid-row: 1 / 3;
+}
+/* sidebar section */
+
+
+/* main section */
+.main {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr) repeat(1, 1fr);
+}
+
+.main .project-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+/* main section */
