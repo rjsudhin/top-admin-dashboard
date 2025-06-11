@@ -33,7 +33,7 @@ To practice and improve layout design using:
 
 ## 🖼 Screenshot
 
-![Admin Dashboard Screenshot](./images/screenshot.png)
+![Admin Dashboard Screenshot](./assest/assest.png)
 
 ---
 
